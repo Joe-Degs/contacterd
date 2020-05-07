@@ -3,13 +3,13 @@
 module.exports = (router, options) => {
   const { repo } = options;
 
-  router.get('/contacterd', (req, res, next) => {
+  router.get('/contacterd/get', (req, res, next) => {
     repo.getAllContacts().then(contacts => {
       res.status(200).json(contacts)
     }).catch(next)
   })
 
-  router.post('/contacterd', (req, res, next) => {
+  router.post('/contacterd/post', (req, res, next) => {
     repo.addContact(req.body).then(contact => {
       res.status(201).json(contact)
     }).catch(next)
@@ -22,7 +22,7 @@ module.exports = (router, options) => {
   })
 
   router.put('/contacterd/update/:id', (req, res, next) => {
-    repo.updateContact(req.params.id).then(contact => {
+    repo.updateContact(req.params.id, req.body).then(contact => {
       res.status(200).json(contact)
     }).catch(next)
   })
@@ -33,4 +33,5 @@ module.exports = (router, options) => {
     }).catch(next)
   })
 
+  return router;
 }

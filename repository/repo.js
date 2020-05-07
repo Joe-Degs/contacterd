@@ -121,7 +121,7 @@ const repository = (db) => {
     addContact,
     updateContact,
     deleteContact
-  })
+  });
 };
 
 const connect = (connection) => {

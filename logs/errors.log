@@ -1,0 +1,34 @@
+        2020-05-06T23:27:48.342Z
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ReferenceError: confib is not defined
+ ReferenceError: confib is not defined
+    at Object.<anonymous> (/home/joedev/Videos/PROJECTS/Contacterd/index.js:47:1)
+    at Module._compile (internal/modules/cjs/loader.js:945:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:962:10)
+    at Module.load (internal/modules/cjs/loader.js:798:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:711:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1014:10)
+    at internal/main/run_main_module.js:17:11
+
+        2020-05-06T23:30:12.773Z
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    MongoServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+ MongoServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at Timeout._onTimeout (/home/joedev/Videos/PROJECTS/Contacterd/node_modules/mongodb/lib/core/sdam/topology.js:430:30)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7)
+
+        2020-05-06T23:33:10.714Z
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    TypeError: Router.use() requires a middleware function but got a undefined
+ TypeError: Router.use() requires a middleware function but got a undefined
+    at Function.use (/home/joedev/Videos/PROJECTS/Contacterd/node_modules/express/lib/router/index.js:458:13)
+    at Function.<anonymous> (/home/joedev/Videos/PROJECTS/Contacterd/node_modules/express/lib/application.js:220:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (/home/joedev/Videos/PROJECTS/Contacterd/node_modules/express/lib/application.js:217:7)
+    at /home/joedev/Videos/PROJECTS/Contacterd/server/server.js:17:7
+    at new Promise (<anonymous>)
+    at Object.start (/home/joedev/Videos/PROJECTS/Contacterd/server/server.js:6:9)
+    at /home/joedev/Videos/PROJECTS/Contacterd/index.js:29:18
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+
