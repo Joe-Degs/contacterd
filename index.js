@@ -22,6 +22,10 @@ process.on('uncaughtRejection', (err, promise) => {
   logs('debug', 'uncaughtRejection at: ' + promise);
 });
 
+process.on('warning', (msg) => {
+	logs('debug', msg);
+});
+
 mediator.on('db.ready', (db, client) => {
 	repository.connect(db)
 		.then(repo => {
