@@ -1,6 +1,6 @@
 const dbSettings = {
   db: process.env.DB || 'contacterd',
-  server: 'mongodb://localhost:27017'
+  server: process.env.DB_SERVER || 'mongodb://localhost:27017'
 }
 
 const serverSettings = {

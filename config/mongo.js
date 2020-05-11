@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 
-//i'll pass config.db.dbSettings to this function.
+
 const connect = (options, mediator) => {
   mediator.once('boot.ready', () => {
     const client = new MongoClient(options.server, {
