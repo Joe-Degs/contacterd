@@ -1,6 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
 
-
 const connect = (options, mediator) => {
   mediator.once('boot.ready', () => {
     const client = new MongoClient(options.server, {
@@ -13,7 +12,6 @@ const connect = (options, mediator) => {
         mediator.emit('db.error', err);
         return;
       }
-
       const db = client.db(options.db);
       mediator.emit('db.ready', db, client);
     })
