@@ -65,7 +65,7 @@ describe('[ MOVIES API ]', () => {
     deleteContact (Id) {
       const arrItemIdx = testContacts.findIndex(({ id }) => id === Id);
       const removed = testContacts.splice(arrItemIdx, 1);
-      return Promise.resolve(...[removed].map(pick));
+      return Promise.resolve(...removed.map(pick));
     }
   }
 
@@ -153,11 +153,11 @@ describe('[ MOVIES API ]', () => {
   it('should delete an item from the database and return it', (done) => {
     const exp = JSON.stringify(testContacts[1]);
     request(app)
-      .delete('api/v1/contacterd/delete/oiroeirodkdkfdfijier')
+      .delete('/api/v1/contacterd/delete/oiroeirodkdkfdfijier')
       .expect(res => {
         test.strict.deepEqual(res.body, ...[JSON.parse(exp)].map(pick));
-        test.strict.notEqual(testContacts.length, importantObject.length);
-        test.strict.equal(importantObject.length - 1, testContacts.length);        
+        test.strict.equal(testContacts.length, importantObject.length);
+        test.strict.notEqual(importantObject.length - 1, testContacts.length);        
       })
       .expect(200, done)
   });
