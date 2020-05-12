@@ -1,3 +1,5 @@
+//testing mongo queries
+
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 const assert = require('assert');
@@ -34,6 +36,8 @@ client.connect(function(err) {
     })
   })
 })
+
+
 // const cursor = collection.insertMany([{
 //   first_name: 'test',
 //   last_name: 'testor',
